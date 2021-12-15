@@ -30,15 +30,15 @@ function getOrder(e) {
     e.preventDefault();
     const item = document.createElement("p")
 
+    let totalItems = parseInt(cookie.value + icecream.value + sandwhich.value + potato.value)
+
     if (cookie.value <= 0 && icecream.value <= 0 && sandwhich.value <= 0 && potato.value <= 0) {
         item.textContent = "No order placed"
     } else {
-        item.textContent = `You ordered ${cookie.value} cookies, ${icecream.value} icecreams, ${sandwhich.value} sandwhiches, and ${potato.value} potatoes.`
+        item.textContent = `You ordered ${totalItems} items: ${cookie.value} cookies, ${icecream.value} icecreams, ${sandwhich.value} sandwhiches, and ${potato.value} potatoes`
     }
 
     order.appendChild(item)
- 
-    
 }
 
 submitBtn2.addEventListener('click', getOrder)
