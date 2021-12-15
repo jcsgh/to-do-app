@@ -29,8 +29,14 @@ const potato = document.getElementById("potato")
 function getOrder(e) {
     e.preventDefault();
     const item = document.createElement("p")
+    let totalItems;
 
-    let totalItems = parseInt(cookie.value + icecream.value + sandwhich.value + potato.value)
+    if (cookie.value <= 0 && icecream.value <= 0 && sandwhich.value <= 0 && potato.value <= 0) {
+        totalItems = 0;
+    } else {
+        totalItems = parseInt(cookie.value + icecream.value + sandwhich.value + potato.value);
+    }
+    
 
     if (cookie.value <= 0 && icecream.value <= 0 && sandwhich.value <= 0 && potato.value <= 0) {
         item.textContent = "No order placed"
