@@ -72,8 +72,8 @@ function assignGrade(score) {
 
 // Write code here 
 for (let i = 60; i<=100; i++) {
-    
-    console.log(`For ${i}, you got a ${assignGrade(i)}`)
+    let result = assignGrade(i);
+    console.log(`For ${i}, you got a ${result}`)
 }
 /*********** Question 5 ************/
 /*
@@ -91,13 +91,16 @@ Write a JavaScript program to construct the following pattern, using a nested fo
 
 
 // Write code here 
-let i, j, s;
+let i, j, output;
 for (i = 1; i <=6; i++) {
+    output =' '
+
     for(j = 1; j<i; j++) {
-        s += ("*");
+        output += ("*");
     }
-    console.log(s)
-    s =''
+
+    console.log(output)
+    
 }
 
 
